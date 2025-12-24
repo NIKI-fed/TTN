@@ -1,5 +1,6 @@
 import React from "react";
 import "./DataTable.css";
+import { formatDate, safeToFixed } from "../utils/utils";
 
 const DataTable = ({ data }) => {
 
@@ -117,27 +118,6 @@ const DataTable = ({ data }) => {
     };
 
     const flattenedData = groupData(data);
-
-    // Приводим дату к формату ХХ.ХХ.ХХХХ
-    const formatDate = (dateString) => {
-        const date = new Date(dateString);
-        const day = String(date.getDate()).padStart(2, "0");
-        const month = String(date.getMonth() + 1).padStart(2, "0");
-        const year = date.getFullYear();
-        return `${day}.${month}.${year}`;
-    };
-
-    // Проверяем, что данные по сумме объёмов - числа
-    const safeToFixed = (value) => {
-        if (value === null || value === undefined) {
-            return "-";
-        }
-        const num = typeof value === 'string' ? parseFloat(value) : value;
-        if (typeof num !== 'number' || isNaN(num)) {
-            return "-";
-        }
-        return num.toFixed(2);
-    };
 
     const renderRow = (row, index) => {
         switch (row.type) {

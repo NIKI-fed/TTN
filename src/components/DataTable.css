@@ -47,6 +47,7 @@
 
 .product-row {
     background-color: #A0BBA8;
+    overflow: hidden;
 }
 
 .detail-row {
