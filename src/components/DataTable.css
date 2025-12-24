@@ -1,0 +1,134 @@
+.data-table-container {
+    width: 1280px;
+    margin: 0 auto 20px auto;
+    background: white;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    overflow-x: auto;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    border: solid 1px black;
+    text-align: center;
+    table-layout: fixed;
+}
+
+.data-table th {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    position: sticky;
+    top: 0;
+    border: solid 1px black;
+}
+
+.text-align-left {
+    text-align: left;
+    padding-left: 2px;
+}
+
+.data-table td {
+    border: solid 1px black;
+    padding-block: 2px;
+}
+
+.client-row {
+    background-color: #B47F93;
+}
+
+.address-row {
+    background-color: #DAD6B0;
+}
+
+.product-row {
+    background-color: #A0BBA8;
+}
+
+.detail-row {
+    background-color: white;
+}
+
+.detail-row:hover,
+.detail-row:hover .product-row {
+    background-color: #e6f7ff;
+}
+
+.group-title {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 4px;
+}
+
+.total-volume {
+    font-weight: 600;
+}
+
+  /* Фиксированная ширина столбцов */
+.data-table th:nth-child(1),
+.data-table td:nth-child(1) {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.data-table th:nth-child(2),
+.data-table td:nth-child(2) {
+    width: 70px;
+    min-width: 70px;
+    max-width: 70px;
+}
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) {
+    width: 50px;
+    min-width: 50px;
+    max-width: 50px;
+}
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) {
+    width: 400px;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.data-table th:nth-child(6),
+.data-table td:nth-child(6) {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.data-table th:nth-child(7),
+.data-table td:nth-child(7) {
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.data-table th:nth-child(8),
+.data-table td:nth-child(8) {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+}
+
+.data-table th:nth-child(9),
+.data-table td:nth-child(9) {
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+}
