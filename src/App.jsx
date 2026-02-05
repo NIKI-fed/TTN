@@ -13,7 +13,8 @@ function App() {
 
         // await new Promise(resolve => setTimeout(resolve, 1000));
 
-        const response = await fetch('/data2.txt');
+        // const response = await fetch('/dataTest2.txt');
+        const response = await fetch('/api/waybills_report_json');
         if (!response.ok) {
           throw new Error('Не удалось загрузить данные');
         }
