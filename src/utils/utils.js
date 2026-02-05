@@ -7,6 +7,33 @@ export const formatDate = (dateString) => {
     return `${day}.${month}.${year}`;
 };
 
+// Функция группировки
+export const groupBy = (array, fieldName, noName) => {
+    return array.reduce((acc, item) => {
+        const key = item[fieldName] || noName;
+
+        if (!acc[key]) {
+            acc[key] = [];
+        }
+
+        acc[key].push(item);
+        return acc;
+
+    }, {});
+};
+
+// Функция для подсчёта объёма с проверкой на числа
+export const totalVolume = (items) => {
+    return items.reduce((sum, item) => {
+        const volume = item.volume;
+        if (volume === null || volume === "") {
+            return sum;
+        }
+        const volumeNum = parseFloat(volume);
+        return (sum + (isNaN(volumeNum) ? 0 : volumeNum));
+    }, 0);
+};
+
 // Проверяем, что данные по сумме объёмов - числа
 export const safeToFixed = (value) => {
     if (value === null || value === undefined) {
